@@ -195,15 +195,6 @@ Contributions are welcome:
 3. Add tests, documentation, or notebook examples where applicable.
 4. Submit a pull request with a clear description of changes.
 
-License
--------
-This project is licensed under the MIT License — see LICENSE for details.
-
-Contact
--------
-Repository owner: SowmiyaHualian  
-For questions or suggestions, please open an issue or contact the owner via the repository.
-
 Acknowledgements
 ----------------
 - UCI Machine Learning Repository — Heart Disease Data Set
