@@ -1,89 +1,82 @@
-# Type‑I Diabetes Risk Analysis using Logistic Regression + Mini‑Batch Gradient Descent
+#  Type 1 Diabetes Risk Analysis and Rehabilitation Recommendation System  
+### Web-Based AI Chatbot using Mini-Batch Gradient Descent
 
-Project description
--------------------
-Type‑I Diabetes Mellitus (T1DM) is a chronic autoimmune disorder in which the pancreas produces little or no insulin. Early identification of individuals at risk is critical for timely intervention, monitoring, and long‑term disease management. This project implements a simple, interpretable Logistic Regression model trained with Mini‑Batch Gradient Descent (MBGD) to deliver probability‑based risk predictions with faster and more stable convergence than traditional batch or stochastic methods.
+---
 
-Key goals
----------
-- Produce probability‑based risk predictions suitable for clinical interpretation.
-- Improve training speed and convergence stability using mini‑batch gradient descent.
-- Preserve model simplicity and interpretability by using logistic regression.
-- Enable early risk analysis to support preventive healthcare and monitoring.
+##  Project Description
 
-Objectives
-----------
-- Implement Logistic Regression for binary classification of Type‑I Diabetes risk.
-- Reduce computational time and memory usage through mini‑batch updates.
-- Generate calibrated probability scores representing diabetes risk.
-- Ensure stable and efficient convergence during training.
+The **Type 1 Diabetes Risk Analysis and Rehabilitation Recommendation System** is a web-based, AI-driven healthcare application designed to predict diabetes risk and support long-term health monitoring through a conversational chatbot interface. The system enables users to interact naturally by submitting clinical parameters such as **Age, BMI, Blood Glucose, and Insulin/HbA1c**, and receive real-time risk assessment results.
 
-Dataset
--------
-Recommended datasets (adapted for risk analysis):
-- Pima Indians Diabetes Dataset (UCI / Kaggle)
-- Other curated diabetes datasets containing glucose, insulin, and related physiological markers
+A **Logistic Regression model optimized using Mini-Batch Gradient Descent (MBGD)** is employed to ensure efficient and stable model training across heterogeneous medical datasets. Unlike traditional single-time prediction systems, this application maintains a **user-specific historical record** of previous reports and predictions. When new health data is provided, the system compares current and past results to identify trends (**Improving, Stable, or Worsening**) and dynamically generates **personalized rehabilitation recommendations**.
 
-Expected format:
-- CSV with numerical and categorical health parameters.
-- A target column indicating risk status:
-  - 0 → Low / No diabetes risk
-  - 1 → High diabetes risk
+By integrating machine learning, backend development, database management, and an interactive web interface, the project demonstrates a complete **end-to-end AI healthcare decision-support system** with real-world applicability.
 
-Typical features (examples)
-- age
-- BMI
-- Blood glucose level
-- Insulin level
-- Blood pressure
-- Family history indicators
-- Autoimmune‑related clinical markers
+---
 
-Note: Many public diabetes datasets are oriented toward Type‑II Diabetes; choose or curate features suitable for T1DM risk analysis where possible.
+##  Key Goals
 
-Preprocessing steps
--------------------
-1. Load the CSV and inspect for missing or inconsistent values.  
-2. Handle missing values via imputation (mean/median/KNN) or row removal, depending on missingness.  
-3. Encode categorical variables with one‑hot or ordinal encoding as appropriate.  
-4. Normalize or standardize continuous features (StandardScaler or MinMaxScaler).  
-5. Split into training / validation / test sets, or use k‑fold cross‑validation.  
-6. Optionally perform feature selection or domain‑informed feature engineering.
+- To develop a **conversational AI-based system** for diabetes risk analysis  
+- To apply **Mini-Batch Gradient Descent** for efficient and scalable machine learning optimization  
+- To enable **continuous health monitoring** through historical data comparison  
+- To provide **personalized rehabilitation recommendations** based on user trends  
+- To design and implement a **fully functional web application**, not just a standalone ML model  
 
-Model and methodology
----------------------
-Model: Logistic Regression  
-Optimization: Mini‑Batch Gradient Descent (MBGD)
+---
 
-Workflow
---------
-1. Initialize model parameters (weights and bias).  
-2. Shuffle training data and divide into mini‑batches of size B.  
-3. For each epoch:
-   - For each mini‑batch:
-     - Compute predictions and the loss (e.g., binary cross‑entropy / log loss).
-     - Compute gradients of the loss w.r.t. parameters.
-     - Update parameters using the gradients and a chosen learning rate (and optionally momentum or learning rate schedules).
-4. Evaluate performance on the validation set and tune hyperparameters (learning rate, batch size, regularization).  
-5. Report final performance on the test set, including probabilities, ROC AUC, accuracy, precision, recall, and calibration metrics (e.g., Brier score).
+##  Objectives
 
-Why Mini‑Batch Gradient Descent
--------------------------------
-- Converges faster than full Batch Gradient Descent for large datasets.  
-- More stable than Stochastic Gradient Descent (noisy single‑sample updates).  
-- Balances computational efficiency and convergence quality.  
-- Scales well to medium and large healthcare datasets and yields smoother loss curves.
+1. To collect and preprocess relevant clinical features from multiple publicly available diabetes datasets  
+2. To build and train a **Logistic Regression model** optimized using **Mini-Batch Gradient Descent**  
+3. To predict diabetes risk probability and classify it into **Low, Moderate, or High** risk levels  
+4. To design a **secure user authentication system** with persistent data storage  
+5. To maintain **user-specific historical health records** for longitudinal analysis  
+6. To compare previous and current predictions to determine **health progression trends**  
+7. To generate **dynamic rehabilitation recommendations** based on risk level and trend analysis  
+8. To create an **interactive chatbot-style web interface** for intuitive user interaction  
 
-Evaluation metrics
-------------------
-- Accuracy
-- Precision, Recall, F1‑score
-- ROC AUC
-- Confusion matrix
-- Calibration (reliability curve, Brier score)
-- Precision‑Recall curve (for imbalanced datasets)
- 
+---
 
-Contact
--------
-For questions or collaboration, contact the repository owner/maintainer.
+##  System Overview
+
+- **Frontend:** HTML, CSS, JavaScript (ChatGPT-style chatbot interface)  
+- **Backend:** Python, Flask (REST APIs, authentication, session management)  
+- **Machine Learning:** Logistic Regression with Mini-Batch Gradient Descent  
+- **Database:** SQLite (users, reports, predictions)  
+
+---
+
+##  Key Features
+
+- User registration and secure login  
+- Conversational chatbot for health data input  
+- Diabetes risk prediction with ML optimization  
+- Historical report comparison and trend analysis  
+- Personalized rehabilitation recommendations  
+- Persistent user data storage  
+
+---
+
+##  Datasets Used
+
+Due to the absence of a single standardized dataset specifically for Type 1 Diabetes, multiple publicly available diabetes datasets were analyzed and relevant clinical features were selected:
+
+- `diabetes.csv`  
+- `diabetes_data.csv`  
+- `diabetes_data_upload.csv`  
+- `diabetes_prediction_dataset.csv`  
+
+---
+
+##  Technology Stack
+
+- **Programming Language:** Python  
+- **Framework:** Flask  
+- **Machine Learning:** NumPy, Pandas  
+- **Optimization:** Mini-Batch Gradient Descent  
+- **Frontend:** HTML, CSS, JavaScript  
+- **Database:** SQLite  
+
+---
+
+
+
